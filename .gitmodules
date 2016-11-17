@@ -13,3 +13,30 @@
 [submodule "modules/firewall"]
 	path = production/modules/firewall
 	url = git@github.com:puppetlabs/puppetlabs-firewall.git
+[submodule "production/modules/logstash"]
+	path = production/modules/logstash
+	url = https://github.com/elastic/puppet-logstash.git
+[submodule "production/modules/file_concat"]
+	path = production/modules/file_concat
+	url = https://github.com/electrical/puppet-lib-file_concat.git
+[submodule "production/modules/apache"]
+	path = production/modules/apache
+	url = https://github.com/puppetlabs/puppetlabs-apache.git
+[submodule "production/modules/concat"]
+	path = production/modules/concat
+	url = https://github.com/puppetlabs/puppetlabs-concat.git
+[submodule "production/modules/elasticsearch"]
+	path = production/modules/elasticsearch
+	url = https://github.com/elastic/puppet-elasticsearch.git
+[submodule "production/modules/kibana4"]
+	path = production/modules/kibana4
+	url = https://github.com/lesaux/puppet-kibana4.git
+[submodule "production/modules/java"]
+	path = production/modules/java
+	url = https://github.com/puppetlabs/puppetlabs-java.git
+[submodule "production/modules/sysctl"]
+	path = production/modules/sysctl
+	url = https://github.com/thias/puppet-sysctl.git
+[submodule "production/modules/datacat"]
+	path = production/modules/datacat
+	url = https://github.com/richardc/puppet-datacat.git

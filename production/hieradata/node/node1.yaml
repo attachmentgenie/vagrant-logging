@@ -1,0 +1,14 @@
+---
+classes:
+ - roles::logging
+profiles::apache::vhosts:
+   node1.elk.vagrant:
+     port: 80
+     proxy_dest: 'http://127.0.0.1:5601'
+profiles::elasticsearch::manage_repo: true
+profiles::kibana::manage_repo: true
+profiles::logstash::manage_repo: true
+stacks::logging::elasticsearch: true
+stacks::logging::kibana: true
+stacks::runtime::java: true
+stacks::website::apache: true

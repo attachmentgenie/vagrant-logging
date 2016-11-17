@@ -1,3 +1,11 @@
 ---
+profiles::logstash::config_files:
+  input:
+    content: 'input { file { type => "syslog" path => [ "/var/log/test.log" ] } } '
+    order: 101
+  output:
+    content: 'output { elasticsearch {} }'
+    order: 899
 profiles::firewall::ensure: stopped
 stacks::bootstrap::firewall: true
+stacks::monitoring::logstash: true
