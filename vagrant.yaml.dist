@@ -1,0 +1,10 @@
+---
+nodes:
+    - name: centos7
+      hostname: node1.elk.vagrant
+      box: bento/centos-7.3
+      ip: 192.168.52.42
+      ports:
+        - guest: 22
+          host: 5242
+virtualbox_group: '/Vagrant/elk'
