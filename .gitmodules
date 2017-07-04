@@ -19,18 +19,12 @@
 [submodule "production/modules/file_concat"]
 	path = production/modules/file_concat
 	url = https://github.com/electrical/puppet-lib-file_concat.git
-[submodule "production/modules/apache"]
-	path = production/modules/apache
-	url = https://github.com/puppetlabs/puppetlabs-apache.git
 [submodule "production/modules/concat"]
 	path = production/modules/concat
 	url = https://github.com/puppetlabs/puppetlabs-concat.git
 [submodule "production/modules/elasticsearch"]
 	path = production/modules/elasticsearch
 	url = https://github.com/elastic/puppet-elasticsearch.git
-[submodule "production/modules/kibana4"]
-	path = production/modules/kibana4
-	url = https://github.com/lesaux/puppet-kibana4.git
 [submodule "production/modules/java"]
 	path = production/modules/java
 	url = https://github.com/puppetlabs/puppetlabs-java.git
@@ -40,3 +34,9 @@
 [submodule "production/modules/datacat"]
 	path = production/modules/datacat
 	url = https://github.com/richardc/puppet-datacat.git
+[submodule "production/modules/nginx"]
+	path = production/modules/nginx
+	url = https://github.com/voxpupuli/puppet-nginx.git
+[submodule "production/modules/kibana"]
+	path = production/modules/kibana
+	url = https://github.com/elastic/puppet-kibana.git
