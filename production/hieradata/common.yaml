@@ -1,10 +1,10 @@
 ---
-profiles::firewall::ensure: stopped
-profiles::logstash::config_files:
+profiles::logstash::manage_repo: true
+profiles::bootstrap::firewall: true
+profiles::bootstrap::firewall::ensure: stopped
+profiles::monitoring::logstash: true
+profiles::monitoring::logstash::config_files:
   input:
     content: 'input { file { type => "syslog" path => [ "/var/log/test.log" ] } } '
   output:
     content: 'output { elasticsearch {} }'
-profiles::logstash::manage_repo: true
-stacks::bootstrap::firewall: true
-stacks::monitoring::logstash: true

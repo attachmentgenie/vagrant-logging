@@ -1,12 +1,12 @@
 ---
 classes:
  - roles::logging
-profiles::elasticsearch::manage_repo: true
-profiles::kibana::manage_repo: true
-profiles::nginx::vhosts:
+profiles::logging::elasticsearch: true
+profiles::logging::elasticsearch::manage_repo: true
+profiles::logging::kibana: true
+profiles::logging::kibana::manage_repo: true
+profiles::runtime::java: true
+profiles::website::nginx: true
+profiles::website::nginx::vhosts:
   elk.logging.vagrant:
     proxy: 'http://127.0.0.1:5601'
-stacks::logging::elasticsearch: true
-stacks::logging::kibana: true
-stacks::runtime::java: true
-stacks::website::nginx: true
