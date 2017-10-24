@@ -1,5 +1,4 @@
 ---
-profiles::logstash::manage_repo: true
 profiles::bootstrap::firewall: true
 profiles::bootstrap::firewall::ensure: stopped
 profiles::monitoring::logstash: true
@@ -8,3 +7,4 @@ profiles::monitoring::logstash::config_files:
     content: 'input { file { type => "syslog" path => [ "/var/log/test.log" ] } } '
   output:
     content: 'output { elasticsearch {} }'
+profiles::monitoring::logstash::manage_repo: true
