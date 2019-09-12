@@ -37,3 +37,6 @@
 [submodule "production/modules/kibana"]
 	path = production/modules/kibana
 	url = https://github.com/elastic/puppet-kibana.git
+[submodule "production/modules/elastic_stack"]
+	path = production/modules/elastic_stack
+	url = https://github.com/elastic/puppet-elastic-stack.git
