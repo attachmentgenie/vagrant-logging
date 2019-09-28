@@ -8,7 +8,6 @@ vagrant starter kit
     vagrant-hostmanager               => vagrant plugin install vagrant-hostmanager
     vagrant-cachier  (optional)       => vagrant plugin install vagrant-cachier
     vagrant-puppet-install (optional) => vagrant plugin install vagrant-puppet-install
-    vagrant-triggers (optional)       => vagrant plugin install vagrant-triggers
     
 ## Preparation
     git submodule update --init
@@ -29,3 +28,4 @@ vagrant starter kit
     - name: od, opendistro
       public_vhosts:
         - http://od.logging.vagrant
+
