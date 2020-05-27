@@ -1,0 +1,14 @@
+---
+classes:
+ - roles::logging
+profiles::logging::loki: true
+profiles::metrics::grafana: true
+profiles::metrics::grafana::http_addr: '%{::ipaddress_eth1}'
+profiles::metrics::grafana::manage_repo: true
+profiles::monitoring::logstash: false
+profiles::monitoring::promtail: true
+profiles::monitoring::promtail::client_url: http://localhost:3100/loki/api/v1/push
+profiles::website::nginx: true
+profiles::website::nginx::proxies:
+  loki.logging.vagrant:
+    proxy_url: 'http://%{::ipaddress_eth1}:3000'

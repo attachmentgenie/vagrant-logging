@@ -2,10 +2,7 @@
 classes:
  - roles::logging
 profiles::logging::elasticsearch: true
-profiles::logging::elasticsearch::manage_repo: true
-profiles::logging::kibana: true
-profiles::logging::kibana::manage_repo: true
 profiles::website::nginx: true
 profiles::website::nginx::proxies:
-  elk.logging.vagrant:
+  opendistro.logging.vagrant:
     proxy_url: 'http://127.0.0.1:5601'

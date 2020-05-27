@@ -40,3 +40,15 @@
 [submodule "production/modules/elastic_stack"]
 	path = production/modules/elastic_stack
 	url = https://github.com/elastic/puppet-elastic-stack.git
+[submodule "production/modules/promtail"]
+	path = production/modules/promtail
+	url = https://github.com/grafana/puppet-promtail.git
+[submodule "production/modules/archive"]
+	path = production/modules/archive
+	url = https://github.com/voxpupuli/puppet-archive.git
+[submodule "production/modules/systemd"]
+	path = production/modules/systemd
+	url = https://github.com/camptocamp/puppet-systemd.git
+[submodule "production/modules/grafana"]
+	path = production/modules/grafana
+	url = git@github.com:voxpupuli/puppet-grafana.git

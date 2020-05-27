@@ -2,14 +2,20 @@
 nodes:
     - name: elk
       hostname: elk.logging.vagrant
-      box: bento/centos-7.6
+      box: bento/centos-7.8
       ip: 192.168.52.42
       cpus: 2
       memory: 4096
-    - name: elk
-      hostname: od.logging.vagrant
-      box: bento/centos-7.6
+    - name: opendistro
+      hostname: opendistro.logging.vagrant
+      box: bento/centos-7.8
       ip: 192.168.52.43
+      cpus: 2
+      memory: 4096
+    - name: loki
+      hostname: loki.logging.vagrant
+      box: bento/centos-7.8
+      ip: 192.168.52.44
       cpus: 2
       memory: 4096
 virtualbox_group: '/Vagrant/logging'

@@ -1,9 +1,0 @@
----
-classes:
- - roles::logging
-profiles::logging::elasticsearch: true
-profiles::runtime::java: true
-profiles::website::nginx: true
-profiles::website::nginx::vhosts:
-  elk.logging.vagrant:
-    proxy: 'http://127.0.0.1:5601'

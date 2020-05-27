@@ -8,3 +8,4 @@ profiles::monitoring::logstash::config_files:
   output:
     content: 'output { elasticsearch {} }'
 profiles::monitoring::logstash::manage_repo: true
+profiles::runtime::java: true
