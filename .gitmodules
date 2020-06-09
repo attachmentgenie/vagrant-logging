@@ -52,3 +52,6 @@
 [submodule "production/modules/grafana"]
 	path = production/modules/grafana
 	url = git@github.com:voxpupuli/puppet-grafana.git
+[submodule "production/modules/loki"]
+	path = production/modules/loki
+	url = git@github.com:attachmentgenie/attachmentgenie-loki.git
