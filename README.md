@@ -28,7 +28,3 @@ vagrant starter kit
     - name: loki
       public_vhosts:
         - http://loki.logging.vagrant
-    - name: od, opendistro
-      public_vhosts:
-        - http://od.logging.vagrant
-

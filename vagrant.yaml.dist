@@ -6,12 +6,6 @@ nodes:
       ip: 192.168.52.42
       cpus: 2
       memory: 4096
-    - name: opendistro
-      hostname: opendistro.logging.vagrant
-      box: bento/centos-7.8
-      ip: 192.168.52.43
-      cpus: 2
-      memory: 4096
     - name: loki
       hostname: loki.logging.vagrant
       box: bento/centos-7.8
