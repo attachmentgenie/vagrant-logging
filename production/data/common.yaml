@@ -1,11 +1,7 @@
 ---
+classes:
+  - roles::logging
 profiles::bootstrap::firewall: true
-profiles::bootstrap::firewall::ensure: stopped
-profiles::monitoring::logstash: true
-profiles::monitoring::logstash::config_files:
-  input:
-    content: 'input { file { type => "syslog" path => [ "/var/log/test.log" ] } } '
-  output:
-    content: 'output { elasticsearch {} }'
-profiles::monitoring::logstash::manage_repo: true
-profiles::runtime::java: true
+profiles::bootstrap::firewall::purge: false
+profiles::monitoring::promtail::client_url: http://loki.logging.vagrant:3100/loki/api/v1/push
+...

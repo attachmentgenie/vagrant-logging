@@ -9,8 +9,18 @@ nodes:
     - name: loki
       hostname: loki.logging.vagrant
       box: bento/centos-7.8
-      ip: 192.168.52.44
+      ip: 192.168.52.43
       cpus: 2
       memory: 4096
+      disks:
+      - name: loki
+        size: 2
+    - name: minio
+      hostname: minio.logging.vagrant
+      box: bento/centos-7.8
+      ip: 192.168.52.44
+      disks:
+      - name: minio
+        size: 4
 puppet_version: 6.19.1
 virtualbox_group: '/Vagrant/logging'

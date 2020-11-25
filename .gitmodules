@@ -55,3 +55,9 @@
 [submodule "production/modules/loki"]
 	path = production/modules/loki
 	url = git@github.com:attachmentgenie/attachmentgenie-loki.git
+[submodule "production/modules/minio"]
+	path = production/modules/minio
+	url = https://github.com/kogitoapp/puppet-minio.git
+[submodule "production/modules/lvm"]
+	path = production/modules/lvm
+	url = https://github.com/puppetlabs/puppetlabs-lvm.git

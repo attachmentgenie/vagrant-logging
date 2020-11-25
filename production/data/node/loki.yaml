@@ -1,6 +1,4 @@
 ---
-classes:
- - roles::logging
 profiles::logging::loki: true
 profiles::logging::loki::auth_enabled: false
 profiles::logging::loki::ingester_config_hash:
@@ -19,31 +17,48 @@ profiles::logging::loki::limits_config_hash:
     enforce_metric_name: false
     reject_old_samples: true
     reject_old_samples_max_age: 168h
+profiles::logging::loki::device: '/dev/sdb'
+profiles::logging::loki::manage_disk: true
 profiles::logging::loki::schema_config_hash:
   schema_config:
     configs:
       - from: '2020-05-15'
-        store: boltdb
-        object_store: filesystem
+        store: boltdb-shipper
+        object_store: aws
         schema: v11
         index:
           prefix: index_
-          period: 168h
+          period: 24h
 profiles::logging::loki::server_config_hash:
   server:
     http_listen_port: 3100
 profiles::logging::loki::storage_config_hash:
+  compactor:
+    working_directory: /var/lib/loki/boltdb_shipper_compactor
+    shared_store: aws
   storage_config:
-    boltdb:
-      directory: /usr/local/loki_data/index
-    filesystem:
-      directory: /usr/local/loki_data/chunks
+    boltdb_shipper:
+      active_index_directory: /var/lib/loki/index
+      cache_location: /var/lib/loki/index_cache
+      resync_interval: 5s
+      shared_store: aws
+    aws:
+      s3: 's3://admin:supersecret@minio.logging.vagrant:9090/loki'
+      region: us-east-1
+      s3forcepathstyle: true
 profiles::metrics::grafana: true
+profiles::metrics::grafana::datasources:
+  Loki:
+    access_mode: proxy
+    grafana_url: 'http://%{::ipaddress_eth1}:3000'
+    grafana_user: admin
+    grafana_password: secret
+    is_default: true
+    type: loki
+    url: http://localhost:3100
 profiles::metrics::grafana::http_addr: '%{::ipaddress_eth1}'
 profiles::metrics::grafana::manage_repo: true
-profiles::monitoring::logstash: false
 profiles::monitoring::promtail: true
-profiles::monitoring::promtail::client_url: http://localhost:3100/loki/api/v1/push
 profiles::website::nginx: true
 profiles::website::nginx::proxies:
   loki.logging.vagrant:
