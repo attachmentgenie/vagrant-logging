@@ -18,5 +18,5 @@ nodes:
       ip: 192.168.52.44
       cpus: 2
       memory: 4096
+puppet_version: 6.19.1
 virtualbox_group: '/Vagrant/logging'
-

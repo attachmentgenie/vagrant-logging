@@ -25,6 +25,9 @@ vagrant starter kit
     - name: elk 7.x
       public_vhosts:
         - http://elk.logging.vagrant
+    - name: loki
+      public_vhosts:
+        - http://loki.logging.vagrant
     - name: od, opendistro
       public_vhosts:
         - http://od.logging.vagrant
