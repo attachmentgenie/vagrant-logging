@@ -27,7 +27,7 @@ vagrant starter kit
         - http://elk.logging.vagrant
     - name: minio
       public_vhosts:
-        - http://minio.logging.vagrant
+        - http://minio.logging.vagrant:9090
     - name: loki
       public_vhosts:
-        - http://loki.logging.vagrant
+        - http://loki.logging.vagrant admin:secret
