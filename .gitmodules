@@ -10,45 +10,18 @@
 [submodule "modules/firewall"]
 	path = production/modules/firewall
 	url = git@github.com:puppetlabs/puppetlabs-firewall.git
-[submodule "production/modules/logstash"]
-	path = production/modules/logstash
-	url = https://github.com/elastic/puppet-logstash.git
-[submodule "production/modules/file_concat"]
-	path = production/modules/file_concat
-	url = https://github.com/electrical/puppet-lib-file_concat.git
 [submodule "production/modules/concat"]
 	path = production/modules/concat
 	url = https://github.com/puppetlabs/puppetlabs-concat.git
-[submodule "production/modules/elasticsearch"]
-	path = production/modules/elasticsearch
-	url = https://github.com/elastic/puppet-elasticsearch.git
-[submodule "production/modules/java"]
-	path = production/modules/java
-	url = https://github.com/puppetlabs/puppetlabs-java.git
-[submodule "production/modules/sysctl"]
-	path = production/modules/sysctl
-	url = https://github.com/thias/puppet-sysctl.git
-[submodule "production/modules/datacat"]
-	path = production/modules/datacat
-	url = https://github.com/richardc/puppet-datacat.git
 [submodule "production/modules/nginx"]
 	path = production/modules/nginx
 	url = https://github.com/voxpupuli/puppet-nginx.git
-[submodule "production/modules/kibana"]
-	path = production/modules/kibana
-	url = https://github.com/elastic/puppet-kibana.git
-[submodule "production/modules/elastic_stack"]
-	path = production/modules/elastic_stack
-	url = https://github.com/elastic/puppet-elastic-stack.git
 [submodule "production/modules/promtail"]
 	path = production/modules/promtail
 	url = https://github.com/grafana/puppet-promtail.git
 [submodule "production/modules/archive"]
 	path = production/modules/archive
 	url = https://github.com/voxpupuli/puppet-archive.git
-[submodule "production/modules/systemd"]
-	path = production/modules/systemd
-	url = https://github.com/camptocamp/puppet-systemd.git
 [submodule "production/modules/grafana"]
 	path = production/modules/grafana
 	url = git@github.com:voxpupuli/puppet-grafana.git
@@ -61,3 +34,6 @@
 [submodule "production/modules/lvm"]
 	path = production/modules/lvm
 	url = https://github.com/puppetlabs/puppetlabs-lvm.git
+[submodule "production/modules/systemd"]
+	path = production/modules/systemd
+	url = https://github.com/camptocamp/puppet-systemd.git

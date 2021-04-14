@@ -6,25 +6,25 @@ vagrant starter kit
     Virtualbox                        => https://www.virtualbox.org
     Vagrant                           => http://www.vagrantup.com
     vagrant-hostmanager               => vagrant plugin install vagrant-hostmanager
+    vagrant-puppet-install            => vagrant plugin install vagrant-puppet-install
     vagrant-cachier  (optional)       => vagrant plugin install vagrant-cachier
-    vagrant-puppet-install (optional) => vagrant plugin install vagrant-puppet-install
     
 ## Preparation
     git submodule update --init
     
 ## Setup
     vagrant up
+    (cd terraform; terraform apply -auto-approve)
+
+    This project doesnt create the required s3 bucket automatically during the puppet run. This will need to be done manually or by running the provided terraform code.
 
 ## Inspec tests
 
     bundle exec rake
-    bundle exec rake inspec[proxy] 
+    bundle exec rake inspec[minio] 
 
 ## TLDR
     
-    - name: elk 7.x
-      public_vhosts:
-        - http://elk.logging.vagrant
     - name: minio
       public_vhosts:
         - http://minio.logging.vagrant:9090
