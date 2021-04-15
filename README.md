@@ -1,6 +1,6 @@
 #  vagrant-logging
 
-vagrant starter kit 
+this project has been superseded by https://github.com/attachmentgenie/vagrant-observability 
 
 ## Requirements
     Virtualbox                        => https://www.virtualbox.org
